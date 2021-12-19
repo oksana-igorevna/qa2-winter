@@ -23,8 +23,6 @@ public class DelfiArticleCommentsTest {
     private final By ARTICLE_PAGE_TITLE = By.xpath(".//h1 [contains(@class, 'text-size-md-30')]");
     private final By ARTICLE_PAGE_COMMENTS = By.xpath(".//a [contains(@class, 'text-size-md-28')]");
 
-
-
     private WebDriver driver;
 
     @Test
@@ -58,6 +56,7 @@ public class DelfiArticleCommentsTest {
         Assertions.assertEquals(homePageCommentsCount, articlePageCommentsCount, " Wrong comments count!");
 
     }
+
     private int getCommentsCount(By locator) {
         int commentsCount = 0;
 
@@ -87,8 +86,6 @@ public class DelfiArticleCommentsTest {
         return Integer.parseInt(commentsCountText);
 
     }
-
-
 
     @AfterEach
     public void closeBrowser() {
